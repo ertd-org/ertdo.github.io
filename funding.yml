@@ -1,0 +1,41 @@
+# .github/funding.yml
+# Official Funding Configuration for ERTDO
+# Exploration Research Trade and Development Organization
+
+#-------------------------------------------------------------------------
+# 1. Primary Native Open-Source Ecosystem Platforms
+#-------------------------------------------------------------------------
+
+# GitHub Sponsors: Hidden natively for organization dashboards in BD, 
+# but kept here to auto-activate the moment policy shifts occur.
+github: [ertd-org]
+
+# Open Collective: Your primary institutional fiscal host channel.
+# Handles corporate tax-deductible invoices for deep-tech enterprises.
+opencollective: ertdo
+
+# Ko-fi / Buy Me a Coffee: Lightweight, mobile-friendly consumer endpoints
+ko_fi: ertdo
+buy_me_a_coffee: ertdo
+
+#-------------------------------------------------------------------------
+# 2. Alternative Specialized Support Channels
+#-------------------------------------------------------------------------
+
+# IssueHunt: Allows enterprises to place bounties on specific ERTDO issues 
+# (e.g., fixing a sub-millisecond execution bug in your Rust core).
+issuehunt: ertd-org
+
+# Liberapay: Recurring micro-donations preferred by open-source purists.
+liberapay: ertdo
+
+#-------------------------------------------------------------------------
+# 3. Custom Institutional & Web3 Infrastructure Endpoints
+#-------------------------------------------------------------------------
+
+# Custom Array: Triggers direct web routing under your verified domain portal.
+# Maps to your official web portal landing page for high-value wire allocations.
+custom: [
+  'https://github.io',
+  'https://github.io'
+]
