@@ -1,220 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Primary SEO Meta Tags -->
-  <title>ERTDO — Exploration Research Trade and Development Organization</title>
-  <meta name="title" content="ERTDO — Exploration Research Trade and Development Organization">
-  <meta name="description" content="Peer-reviewed deep-tech frameworks, open-source software, and scientific computing spanning small satellite operating systems, genomics, agritech ML, physics AI, and quantitative trade.">
-  <meta name="keywords" content="ERTDO, OrbitMesh, PhyTrade, PhysTensor, SoilBench, BEND Framework, Genomic Sequence Classification, Small Satellite OS, Open Source Research">
-  <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="ERTDO — Institutional Deep-Tech & Scientific Computing">
-  <meta property="og:description" content="Peer-reviewed research and open-source software engines across aerospace, genomics, agritech, physics AI, and commodity trade.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandNavy: '#0D2240',
-            brandGray: '#EAECEF',
-            brandSlate: '#4A5568',
-            brandBlue: '#1E40AF',
-          }
+    <!-- Primary SEO Meta Tags -->
+    <title>ERTDO — Exploration Research Trade and Development Organization</title>
+    <meta name="title" content="ERTDO — Exploration Research Trade and Development Organization">
+    <meta name="description"
+        content="Peer-reviewed deep-tech frameworks, open-source software, and scientific computing spanning small satellite operating systems, genomics, agritech ML, physics AI, and quantitative trade.">
+    <meta name="keywords"
+        content="ERTDO, OrbitMesh, PhyTrade, PhysTensor, SoilBench, BEND Framework, Genomic Sequence Classification, Small Satellite OS, Open Source Research">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ERTDO — Institutional Deep-Tech & Scientific Computing">
+    <meta property="og:description"
+        content="Peer-reviewed research and open-source software engines across aerospace, genomics, agritech, physics AI, and commodity trade.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+
+            theme: {
+                extend: {
+                    colors: {
+                        brandNavy: '#0D2240',
+                        brandGray: '#EAECEF',
+                        brandSlate: '#4A5568',
+                        brandBlue: '#1E40AF',
+                    }
+                }
+            }
         }
-      }
+    </script>
+
+    <!-- Dark Mode Initialisation -->
+    <script>
+        if (
+            localStorage.getItem('theme') === 'dark' ||
+            (!localStorage.getItem('theme') &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ResearchOrganization",
+        "name": "Exploration Research Trade and Development Organization",
+        "alternateName": "ERTDO",
+        "url": "https://ertdo.org",
+        "description": "Institutional deep-tech frameworks, peer-reviewed scientific computing, and open-source protocols.",
+        "sameAs": [
+            "https://pypi.org/project/phytrade/",
+            "https://pypi.org/project/phystensor/",
+            "https://zenodo.org/records/20827876",
+            "https://zenodo.org/records/21193342",
+            "https://zenodo.org/records/21816589"
+        ]
     }
-  </script>
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ResearchOrganization",
-    "name": "Exploration Research Trade and Development Organization",
-    "alternateName": "ERTDO",
-    "url": "https://ertdo.org",
-    "description": "Institutional deep-tech frameworks, peer-reviewed scientific computing, and open-source protocols.",
-    "sameAs": [
-      "https://pypi.org/project/phytrade/",
-      "https://pypi.org/project/phystensor/",
-      "https://zenodo.org/records/20827876",
-      "https://zenodo.org/records/21193342",
-      "https://zenodo.org/records/21816589"
-    ]
-  }
-  </script>
+    </script>
 </head>
-<body class="bg-gray-200 text-brandNavy font-sans antialiased selection:bg-brandNavy selection:text-white">
 
-  <!-- Header -->
-  <header class="border-b border-gray-300 bg-gray-200/90 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div>
-        <h1 class="text-3xl font-black tracking-wider text-brandNavy leading-none">ERTDO</h1>
-        <p class="text-xs font-medium text-brandSlate tracking-tight mt-0.5">Exploration Research Trade and Development Organization</p>
-      </div>
-      <div class="flex gap-6 text-sm font-semibold text-brandNavy">
-        <a href="#products" class="hover:text-brandBlue transition">Open Source Stack</a>
-        <a href="#research" class="hover:text-brandBlue transition">Research</a>
-        <a href="#consulting" class="bg-brandNavy hover:bg-brandBlue text-white px-4 py-2 rounded transition">Custom Integration</a>
-      </div>
-    </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="max-w-6xl mx-auto px-6 py-20 text-center border-b border-gray-300">
-    <h2 class="text-4xl md:text-6xl font-black tracking-tight text-brandNavy mb-4">
-      Open Deep-Tech & Peer-Reviewed Protocols
-    </h2>
-    <p class="text-lg md:text-xl text-brandSlate max-w-3xl mx-auto mb-8 font-normal">
-      Open-access scientific computing engines, small satellite operating systems, and ML frameworks. Fully open-source — engineered for custom enterprise deployment and applied R&D.
-    </p>
-    <div class="flex justify-center gap-4">
-      <a href="#products" class="bg-brandNavy hover:bg-brandBlue text-white font-bold px-6 py-3 rounded shadow transition">Explore Open Codebases</a>
-      <a href="#consulting" class="border-2 border-brandNavy text-brandNavy hover:bg-brandNavy hover:text-white font-bold px-6 py-3 rounded transition">Book Advisory Call ($250)</a>
-    </div>
-  </section>
+<body
+    class="bg-gray-200 dark:bg-gray-950 text-brandNavy dark:text-gray-100 font-sans antialiased selection:bg-brandNavy selection:text-white transition-colors duration-300">
 
-  <!-- Open Source Stack Grid -->
-  <section id="products" class="max-w-6xl mx-auto px-6 py-16 border-b border-gray-300">
-    <div class="flex justify-between items-end mb-8">
-      <div>
-        <h3 class="text-2xl font-black text-brandNavy">Open-Source Engines & Protocols</h3>
-        <p class="text-sm text-brandSlate">All core frameworks are open access. Commercial integration and custom architecture available.</p>
-      </div>
-      <span class="text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 border border-emerald-300 px-3 py-1 rounded">100% Open Access</span>
-    </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Header -->
+    <header
+        class="border-b border-gray-300 dark:border-gray-800 bg-gray-200/90 dark:bg-gray-950/90 backdrop-blur sticky top-0 z-50 transition-colors duration-300">
 
-      <!-- BEND Genomic Classification -->
-      <div class="bg-white border border-gray-300 rounded-lg p-6 shadow-sm flex flex-col justify-between">
-        <div>
-          <span class="text-xs font-bold px-2.5 py-1 bg-purple-100 text-purple-900 rounded border border-purple-200">Bioinformatics</span>
-          <h4 class="text-lg font-bold text-brandNavy mt-3 mb-2 leading-tight">Comparison of Broad Spectrum Algorithms using the BEND Framework for Genomic Sequence Classification</h4>
-          <p class="text-sm text-brandSlate mb-3">Broad-spectrum algorithm framework for genomic sequence classification & high-throughput inference.</p>
-          <a href="https://zenodo.org/records/20827876" target="_blank" class="text-xs text-brandBlue font-semibold underline block mb-4">Zenodo Record #20827876</a>
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+            <div>
+                <h1 class="text-3xl font-black tracking-wider text-brandNavy dark:text-white leading-none">
+                    ERTDO
+                </h1>
+
+                <p class="text-xs font-medium text-brandSlate dark:text-gray-400 tracking-tight mt-0.5">
+                    Exploration Research Trade and Development Organization
+                </p>
+            </div>
+
+
+            <div class="flex gap-3 text-sm font-semibold text-brandNavy dark:text-white items-center">
+
+                <a href="#products"
+                    class="bg-brandNavy hover:bg-brandBlue hover:-translate-y-1 hover:scale-105 hover:shadow-lg text-white px-4 py-2 rounded transition-all duration-200">
+                    Open Source Stack
+                </a>
+
+                <a href="#research"
+                    class="bg-brandNavy hover:bg-brandBlue hover:-translate-y-1 hover:scale-105 hover:shadow-lg text-white px-4 py-2 rounded transition-all duration-200">
+                    Research
+                </a>
+
+                <a href="#consulting"
+                    class="bg-brandNavy hover:bg-brandBlue hover:-translate-y-1 hover:scale-105 hover:shadow-lg text-white px-4 py-2 rounded transition-all duration-200">
+                    Custom Integration
+                </a>
+
+
+                <!-- Dark Mode Toggle -->
+                <button id="themeToggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                    class="ml-1 w-10 h-10 flex items-center justify-center rounded-lg border border-gray-400 dark:border-gray-600 bg-white dark:bg-gray-800 text-brandNavy dark:text-yellow-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:-translate-y-1 hover:scale-105 hover:shadow-lg transition-all duration-200">
+
+                    <span id="themeIcon" class="text-lg">
+                        🌙
+                    </span>
+
+                </button>
+
+            </div>
+
         </div>
-        <div>
-          <div class="text-xs text-brandSlate mb-3 font-medium">Open Access Research | Custom Pipeline</div>
-          <a href="#consulting" class="block text-center bg-brandNavy hover:bg-brandBlue text-white text-sm font-bold py-2 rounded transition">Book Pipeline Integration</a>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section
+        class="max-w-6xl mx-auto px-6 py-20 text-center border-b border-gray-300 dark:border-gray-800 transition-colors duration-300">
+
+        <h2 class="text-4xl md:text-6xl font-black tracking-tight text-brandNavy dark:text-white mb-4">
+            Open Deep-Tech & Peer-Reviewed Protocols
+        </h2>
+
+        <p class="text-lg md:text-xl text-brandSlate dark:text-gray-300 max-w-3xl mx-auto mb-8 font-normal">
+            Open-access scientific computing engines, small satellite operating systems, and ML frameworks.
+            Fully open-source — engineered for custom enterprise deployment and applied R&D.
+        </p>
+
+        <div class="flex justify-center gap-4">
+
+            <a href="#products"
+                class="bg-brandNavy hover:bg-brandBlue hover:-translate-y-1 hover:scale-105 hover:shadow-lg text-white font-bold px-6 py-3 rounded shadow transition-all duration-200">
+                Explore Open Codebases
+            </a>
+
+            <a href="#consulting"
+                class="bg-brandNavy hover:bg-brandBlue hover:-translate-y-1 hover:scale-105 hover:shadow-lg text-white font-bold px-6 py-3 rounded transition-all duration-200">
+                Book Advisory Call ($250)
+            </a>
+
         </div>
-      </div>
 
-      <!-- OrbitMesh -->
-      <div class="bg-white border border-gray-300 rounded-lg p-6 shadow-sm flex flex-col justify-between">
-        <div>
-          <span class="text-xs font-bold px-2.5 py-1 bg-blue-100 text-brandBlue rounded border border-blue-200">Aerospace / OS</span>
-          <h4 class="text-xl font-bold text-brandNavy mt-3 mb-1">OrbitMesh</h4>
-          <p class="text-sm text-brandSlate mb-4">Small satellite operating system and distributed flight software execution framework.</p>
-          <a href="https://zenodo.org/records/21816589" target="_blank" class="text-xs text-brandBlue font-semibold underline block mb-4">Zenodo Record #21816589</a>
+    </section>
+
+
+    <!-- Open Source Stack Grid -->
+    <section id="products"
+        class="max-w-6xl mx-auto px-6 py-16 border-b border-gray-300 dark:border-gray-800 transition-colors duration-300">
+
+        <div class="flex justify-between items-end mb-8">
+
+            <div>
+
+                <h3 class="text-2xl font-black text-brandNavy dark:text-white">
+                    Open-Source Engines & Protocols
+                </h3>
+
+                <p class="text-sm text-brandSlate dark:text-gray-400">
+                    All core frameworks are open access. Commercial integration and custom architecture available.
+                </p>
+
+            </div>
+
+            <span
+                class="text-xs font-bold uppercase tracking-wider bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 px-3 py-1 rounded">
+                100% Open Access
+            </span>
+
         </div>
-        <div>
-          <div class="text-xs text-brandSlate mb-3 font-medium">Open Source | Integration from $2,500</div>
-          <a href="#consulting" class="block text-center bg-brandNavy hover:bg-brandBlue text-white text-sm font-bold py-2 rounded transition">Request Custom Integration</a>
+
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+            <!-- BEND Genomic Classification -->
+            <div
+                class="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-6 shadow-sm flex flex-col justify-between hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl transition-all duration-200">
+
+                <div>
+
+                    <span
+                        class="text-xs font-bold px-2.5 py-1 bg-purple-100 dark:bg-purple-950 text-purple-900 dark:text-purple-300 rounded border border-purple-200 dark:border-purple-800">
+                        Bioinformatics
+                    </span>
+
+                    <h4 class="text-lg font-bold text-brandNavy dark:text-white mt-3 mb-2 leading-tight">
+                        Comparison of Broad Spectrum Algorithms using the BEND Framework for Genomic Sequence
+                        Classification
+                    </h4>
+
+                    <p class="text-sm text-brandSlate dark:text-gray-400 mb-3">
+                        Broad-spectrum algorithm framework for genomic sequence classification & high-throughput
+                        inference.
+                    </p>
+
+                    <a href="https://zenodo.org/records/20827876" target="_blank"
+                        class="inline-block text-xs text-brandBlue dark:text-blue-400 font-semibold underline mb-4 hover:text-brandNavy dark:hover:text-blue-300 hover:no-underline hover:-translate-y-1 hover:scale-105 hover:shadow-md hover:bg-blue-50 dark:hover:bg-blue-950 hover:px-2 hover:py-1 hover:rounded transition-all duration-200">
+                        Zenodo Record #20827876
+                    </a>
+
+                </div>
+
+                <div>
+
+                    <div class="text-xs text-brandSlate dark:text-gray-400 mb-3 font-medium">
+                        Open Access Research | Custom Pipeline
+                    </div>
+
+                    <a href="#consulting"
+                        class="block text-center bg-brandNavy hover:bg-brandBlue hover:-translate-y-1 hover:scale-105 hover:shadow-lg text-white text-sm font-bold py-2 rounded transition-all duration-200">
+                        Book Pipeline Integration
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- OrbitMesh -->
+            <div
+                class="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-6 shadow-sm flex flex-col justify-between hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl transition-all duration-200">
+
+                <div>
+
+                    <span
+                        class="text-xs font-bold px-2.5 py-1 bg-blue-100 dark:bg-blue-950 text-brandBlue dark:text-blue-300 rounded border border-blue-200 dark:border-blue-800">
+                        Aerospace / OS
+                    </span>
+
+                    <h4 class="text-xl font-bold text-brandNavy dark:text-white mt-3 mb-1">
+                        OrbitMesh
+                    </h4>
+
+                    <p class="text-sm text-brandSlate dark:text-gray-400 mb-4">
+                        Small satellite operating system and distributed flight software execution framework.
+                    </p>
+
+                    <a href="https://zenodo.org/records/21816589" target="_blank"
+                        class="inline-block text-xs text-brandBlue dark:text-blue-400 font-semibold underline mb-4 hover:text-brandNavy dark:hover:text-blue-300 hover:no-underline hover:-translate-y-1 hover:scale-105 hover:shadow-md hover:bg-blue-50 dark:hover:bg-blue-950 hover:px-2 hover:py-1 hover:rounded transition-all duration-200">
+                        Zenodo Record #21816589
+                    </a>
+
+                </div>
+
+                <div>
+
+                    <div class="text-xs text-brandSlate dark:text-gray-400 mb-3 font-medium">
+                        Open Source | Integration from $2,500
+                    </div>
+
+                    <a href="#consulting"
+                        class="block text-center bg-brandNavy hover:bg-brandBlue hover:-translate-y-1 hover:scale-105 hover:shadow-lg text-white text-sm font-bold py-2 rounded transition-all duration-200">
+                        Request Custom Integration
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PhyTrade -->
+            <div
+                class="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-6 shadow-sm flex flex-col justify-between hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl transition-all duration-200">
+
+                <div>
+
+                    <span
+                        class="text-xs font-bold px-2.5 py-1 bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 rounded border border-emerald-200 dark:border-emerald-800">
+                        Quantitative Trade
+                    </span>
+
+                    <h4 class="text-xl font-bold text-brandNavy dark:text-white mt-3 mb-1">
+                        PhyTrade
+                    </h4>
+
+                    <p class="text-sm text-brandSlate dark:text-gray-400 mb-2">
+                        Institutional physics-based engine and protocol for global commodity arbitration.
+                    </p>
+
+                    <code
+                        class="text-xs bg-gray-100 dark:bg-gray-800 text-brandNavy dark:text-gray-200 px-2 py-1 rounded block mb-4 font-mono border border-gray-200 dark:border-gray-700">
+                        pip install phytrade
+                    </code>
+
+                </div>
+
+                <div>
+
+                    <div class="text-xs text-brandSlate dark:text-gray-400 mb-3 font-medium">
+                        PyPI Package | Integration from $2,500
+                    </div>
+
+                    <a href="#consulting"
+                        class="block text-center bg-brandNavy hover:bg-brandBlue hover:-translate-y-1 hover:scale-105 hover:shadow-lg text-white text-sm font-bold py-2 rounded transition-all duration-200">
+                        Deploy Commercial Feed
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PhysTensor -->
+            <div
+                class="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-6 shadow-sm flex flex-col justify-between hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl transition-all duration-200">
+
+                <div>
+
+                    <span
+                        class="text-xs font-bold px-2.5 py-1 bg-indigo-100 dark:bg-indigo-950 text-indigo-900 dark:text-indigo-300 rounded border border-indigo-200 dark:border-indigo-800">
+                        Scientific AI
+                    </span>
+
+                    <h4 class="text-xl font-bold text-brandNavy dark:text-white mt-3 mb-1">
+                        PhysTensor
+                    </h4>
+
+                    <p class="text-sm text-brandSlate dark:text-gray-400 mb-2">
+                        Strictly-typed physical unit tensors for scientific AI and real-time simulations.
+                    </p>
+
+                    <code
+                        class="text-xs bg-gray-100 dark:bg-gray-800 text-brandNavy dark:text-gray-200 px-2 py-1 rounded block mb-4 font-mono border border-gray-200 dark:border-gray-700">
+                        pip install phystensor
+                    </code>
+
+                </div>
+
+                <div>
+
+                    <div class="text-xs text-brandSlate dark:text-gray-400 mb-3 font-medium">
+                        PyPI Package | CUDA Optimization Audit
+                    </div>
+
+                    <a href="#consulting"
+                        class="block text-center bg-brandNavy hover:bg-brandBlue hover:-translate-y-1 hover:scale-105 hover:shadow-lg text-white text-sm font-bold py-2 rounded transition-all duration-200">
+                        Request Model Audit
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- SoilBench -->
+            <div
+                class="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-6 shadow-sm flex flex-col justify-between hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl transition-all duration-200">
+
+                <div>
+
+                    <span
+                        class="text-xs font-bold px-2.5 py-1 bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-300 rounded border border-amber-200 dark:border-amber-800">
+                        Agritech ML
+                    </span>
+
+                    <h4 class="text-xl font-bold text-brandNavy dark:text-white mt-3 mb-1">
+                        SoilBench
+                    </h4>
+
+                    <p class="text-sm text-brandSlate dark:text-gray-400 mb-2">
+                        Agricultural machine learning benchmark suite and spatial soil predictive modeling framework.
+                    </p>
+
+                    <a href="https://zenodo.org/records/21193342" target="_blank"
+                        class="inline-block text-xs text-brandBlue dark:text-blue-400 font-semibold underline mb-4 hover:text-brandNavy dark:hover:text-blue-300 hover:no-underline hover:-translate-y-1 hover:scale-105 hover:shadow-md hover:bg-blue-50 dark:hover:bg-blue-950 hover:px-2 hover:py-1 hover:rounded transition-all duration-200">
+                        Zenodo Record #21193342
+                    </a>
+
+                </div>
+
+                <div>
+
+                    <div class="text-xs text-brandSlate dark:text-gray-400 mb-3 font-medium">
+                        Open Dataset | Custom ML Audit
+                    </div>
+
+                    <a href="#consulting"
+                        class="block text-center bg-brandNavy hover:bg-brandBlue hover:-translate-y-1 hover:scale-105 hover:shadow-lg text-white text-sm font-bold py-2 rounded transition-all duration-200">
+                        Request Agritech Audit
+                    </a>
+
+                </div>
+
+            </div>
+
+
         </div>
-      </div>
+    </section>
 
-      <!-- PhyTrade -->
-      <div class="bg-white border border-gray-300 rounded-lg p-6 shadow-sm flex flex-col justify-between">
-        <div>
-          <span class="text-xs font-bold px-2.5 py-1 bg-emerald-100 text-emerald-800 rounded border border-emerald-200">Quantitative Trade</span>
-          <h4 class="text-xl font-bold text-brandNavy mt-3 mb-1">PhyTrade</h4>
-          <p class="text-sm text-brandSlate mb-2">Institutional physics-based engine and protocol for global commodity arbitration.</p>
-          <code class="text-xs bg-gray-100 text-brandNavy px-2 py-1 rounded block mb-4 font-mono border border-gray-200">pip install phytrade</code>
+
+    <!-- Enterprise Advisory & Retainers -->
+    <section id="consulting" class="max-w-6xl mx-auto px-6 py-16">
+
+        <h3 class="text-2xl font-black text-brandNavy dark:text-white mb-2">
+            Enterprise Advisory & Custom R&D
+        </h3>
+
+        <p class="text-sm text-brandSlate dark:text-gray-400 mb-8">
+            Direct integration, custom architecture, and proprietary development built on top of our 60+ repositories.
+        </p>
+
+
+        <div class="grid md:grid-cols-2 gap-8">
+
+
+            <!-- Technical Advisory Session -->
+            <div
+                class="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 p-8 rounded-lg shadow-sm">
+
+                <h4 class="text-xl font-bold text-brandNavy dark:text-white mb-2">
+                    Technical Advisory Session
+                </h4>
+
+                <div class="text-3xl font-black text-brandNavy dark:text-white mb-4">
+                    $250
+                    <span class="text-sm text-brandSlate dark:text-gray-400 font-normal">
+                        / 45 mins
+                    </span>
+                </div>
+
+                <p class="text-brandSlate dark:text-gray-400 text-sm mb-6">
+                    Direct 1-on-1 access with founders for architecture review,
+                    small satellite OS deployment, physical unit tensor integration,
+                    or ML pipeline verification.
+                </p>
+
+                <a href="https://calendly.com" target="_blank"
+                    class="block text-center bg-brandNavy hover:bg-brandBlue hover:-translate-y-1 hover:scale-105 hover:shadow-lg text-white font-bold py-3 rounded transition-all duration-200">
+                    Schedule Advisory Call
+                </a>
+
+            </div>
+
+
+            <!-- Dedicated R&D Retainer -->
+            <div
+                class="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 p-8 rounded-lg shadow-sm">
+
+                <h4 class="text-xl font-bold text-brandNavy dark:text-white mb-2">
+                    Dedicated R&D Retainer
+                </h4>
+
+                <div class="text-3xl font-black text-brandNavy dark:text-white mb-4">
+                    $5,000
+                    <span class="text-sm text-brandSlate dark:text-gray-400 font-normal">
+                        / month
+                    </span>
+                </div>
+
+                <p class="text-brandSlate dark:text-gray-400 text-sm mb-6">
+                    Full engineering support. Custom protocol development, flight
+                    software integration, or proprietary model training tailored
+                    to your organization's infrastructure.
+                </p>
+
+                <a href="mailto:contact@ertdo.org"
+                    class="block text-center bg-brandNavy hover:bg-brandBlue hover:-translate-y-1 hover:scale-105 hover:shadow-lg text-white font-bold py-3 rounded transition-all duration-200">
+                    Inquire About Retainer
+                </a>
+
+            </div>
+
         </div>
-        <div>
-          <div class="text-xs text-brandSlate mb-3 font-medium">PyPI Package | Integration from $2,500</div>
-          <a href="#consulting" class="block text-center bg-brandNavy hover:bg-brandBlue text-white text-sm font-bold py-2 rounded transition">Deploy Commercial Feed</a>
+    </section>
+
+
+    <!-- ERTDO Institutional Funding Block -->
+    <section id="funding"
+        class="py-12 px-5 text-center bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+
+        <h2 class="text-gray-900 dark:text-white mb-3 text-2xl font-semibold">
+            Support ERTDO Innovation
+        </h2>
+
+        <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto mb-7 leading-relaxed text-sm">
+            Help fund our institutional deep-tech frameworks spanning genomics, agritech, multi-agent AI,
+            and quantitative trade.
+        </p>
+
+
+        <div class="flex flex-row gap-3 justify-center items-center max-w-2xl mx-auto">
+
+            <!-- Open Collective -->
+            <a href="https://opencollective.com" target="_blank"
+                class="block w-full box-border px-6 py-3.5 bg-[#0066fe] hover:bg-[#0052cc] text-white no-underline rounded-md font-semibold text-sm shadow-sm hover:-translate-y-1 hover:scale-[1.03] hover:shadow-lg transition-all duration-200">
+
+                Sponsor via Open Collective
+
+            </a>
+
+
+            <!-- Buy Me a Coffee -->
+            <a href="https://buymeacoffee.com" target="_blank"
+                class="block w-full box-border px-6 py-3.5 bg-[#ffd800] hover:bg-[#f5c900] text-gray-900 no-underline rounded-md font-semibold text-sm shadow-sm hover:-translate-y-1 hover:scale-[1.03] hover:shadow-lg transition-all duration-200">
+
+                Buy Me a Coffee
+
+            </a>
+
         </div>
-      </div>
 
-      <!-- PhysTensor -->
-      <div class="bg-white border border-gray-300 rounded-lg p-6 shadow-sm flex flex-col justify-between">
-        <div>
-          <span class="text-xs font-bold px-2.5 py-1 bg-indigo-100 text-indigo-900 rounded border border-indigo-200">Scientific AI</span>
-          <h4 class="text-xl font-bold text-brandNavy mt-3 mb-1">PhysTensor</h4>
-          <p class="text-sm text-brandSlate mb-2">Strictly-typed physical unit tensors for scientific AI and real-time simulations.</p>
-          <code class="text-xs bg-gray-100 text-brandNavy px-2 py-1 rounded block mb-4 font-mono border border-gray-200">pip install phystensor</code>
-        </div>
-        <div>
-          <div class="text-xs text-brandSlate mb-3 font-medium">PyPI Package | CUDA Optimization Audit</div>
-          <a href="#consulting" class="block text-center bg-brandNavy hover:bg-brandBlue text-white text-sm font-bold py-2 rounded transition">Request Model Audit</a>
-        </div>
-      </div>
+    </section>
 
-      <!-- SoilBench -->
-      <div class="bg-white border border-gray-300 rounded-lg p-6 shadow-sm flex flex-col justify-between">
-        <div>
-          <span class="text-xs font-bold px-2.5 py-1 bg-amber-100 text-amber-900 rounded border border-amber-200">Agritech ML</span>
-          <h4 class="text-xl font-bold text-brandNavy mt-3 mb-1">SoilBench</h4>
-          <p class="text-sm text-brandSlate mb-2">Agricultural machine learning benchmark suite and spatial soil predictive modeling framework.</p>
-          <a href="https://zenodo.org/records/21193342" target="_blank" class="text-xs text-brandBlue font-semibold underline block mb-4">Zenodo Record #21193342</a>
-        </div>
-        <div>
-          <div class="text-xs text-brandSlate mb-3 font-medium">Open Dataset | Custom ML Audit</div>
-          <a href="#consulting" class="block text-center bg-brandNavy hover:bg-brandBlue text-white text-sm font-bold py-2 rounded transition">Request Agritech Audit</a>
-        </div>
-      </div>
 
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer
+        class="border-t border-gray-300 dark:border-gray-800 text-center py-8 text-xs text-brandSlate dark:text-gray-500 transition-colors duration-300">
 
-  <!-- Enterprise Advisory & Retainers -->
-  <section id="consulting" class="max-w-6xl mx-auto px-6 py-16">
-    <h3 class="text-2xl font-black text-brandNavy mb-2">Enterprise Advisory & Custom R&D</h3>
-    <p class="text-sm text-brandSlate mb-8">Direct integration, custom architecture, and proprietary development built on top of our 60+ repositories.</p>
+        <p>
+            © 2026 ERTDO — Exploration Research Trade and Development Organization.
+            All rights reserved.
+        </p>
 
-    <div class="grid md:grid-cols-2 gap-8">
-      
-      <div class="bg-white border border-gray-300 p-8 rounded-lg shadow-sm">
-        <h4 class="text-xl font-bold text-brandNavy mb-2">Technical Advisory Session</h4>
-        <div class="text-3xl font-black text-brandNavy mb-4">$250 <span class="text-sm text-brandSlate font-normal">/ 45 mins</span></div>
-        <p class="text-brandSlate text-sm mb-6">Direct 1-on-1 access with founders for architecture review, small satellite OS deployment, physical unit tensor integration, or ML pipeline verification.</p>
-        <a href="https://calendly.com" target="_blank" class="block text-center bg-brandNavy hover:bg-brandBlue text-white font-bold py-3 rounded transition">Schedule Advisory Call</a>
-      </div>
+    </footer>
 
-      <div class="bg-white border border-gray-300 p-8 rounded-lg shadow-sm">
-        <h4 class="text-xl font-bold text-brandNavy mb-2">Dedicated R&D Retainer</h4>
-        <div class="text-3xl font-black text-brandNavy mb-4">$5,000 <span class="text-sm text-brandSlate font-normal">/ month</span></div>
-        <p class="text-brandSlate text-sm mb-6">Full engineering support. Custom protocol development, flight software integration, or proprietary model training tailored to your organization's infrastructure.</p>
-        <a href="mailto:contact@ertdo.org" class="block text-center border-2 border-brandNavy text-brandNavy hover:bg-brandNavy hover:text-white font-bold py-3 rounded transition">Inquire About Retainer</a>
-      </div>
 
-    </div>
-  </section>
+    <!-- Dark Mode Script -->
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
 
-  <!-- ERTDO Institutional Funding Block - Mobile Optimized -->
-<section id="funding" style="padding: 45px 20px; text-align: center; background-color: #fcfcfc; border-top: 1px solid #eee; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <h2 style="color: #1a1a1a; margin-bottom: 12px; font-size: 1.5rem; font-weight: 600;">Support ERTDO Innovation</h2>
-    <p style="color: #555; max-width: 600px; margin: 0 auto 28px auto; line-height: 1.6; font-size: 0.95rem;">
-        Help fund our institutional deep-tech frameworks spanning genomics, agritech, multi-agent AI, and quantitative trade.
-    </p>
-    <!-- Flexbox Container with explicit gap and center alignment for small screens -->
-    <div style="display: flex; gap: 12px; justify-content: center; align-items: center; flex-direction: column; max-width: 320px; margin: 0 auto;">
-        
-        <a href="https://opencollective.com" target="_blank" style="display: block; width: 100%; box-sizing: border-box; padding: 14px 24px; background-color: #0066fe; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.95rem; transition: background-color 0.2s;">
-            Sponsor via Open Collective
-        </a>
-        
-        <a href="https://buymeacoffee.com" target="_blank" style="display: block; width: 100%; box-sizing: border-box; padding: 14px 24px; background-color: #ffd800; color: #111; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.95rem; transition: background-color 0.2s;">
-            Buy Me a Coffee
-        </a>
-        
-    </div>
-</section>
+        function updateThemeIcon() {
+            if (document.documentElement.classList.contains('dark')) {
+                themeIcon.textContent = '☀️';
+                themeToggle.setAttribute('aria-label', 'Switch to light mode');
+            } else {
+                themeIcon.textContent = '🌙';
+                themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+            }
+        }
 
-  <!-- Footer -->
-  <footer class="border-t border-gray-300 text-center py-8 text-xs text-brandSlate">
-    <p>© 2026 ERTDO — Exploration Research Trade and Development Organization. All rights reserved.</p>
-  </footer>
+        themeToggle.addEventListener('click', function () {
+            document.documentElement.classList.toggle('dark');
 
-</body>                                                                          </html
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+
+            updateThemeIcon();
+        });
+
+        updateThemeIcon();
+    </script>
+
+
+</body>
+
+</html>
